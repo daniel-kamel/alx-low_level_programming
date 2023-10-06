@@ -3,12 +3,12 @@
 #include <stdio.h>
 
 /**
- * main: Entry point
- * 
+ * main - Entry point
+ *
  * Description: Prints whether a random number is
  * positive, negative or equals 0
  *
- * return: ALways 0
+ * Return: ALways 0
  */
 int main(void)
 {
