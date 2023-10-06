@@ -22,8 +22,8 @@ int main(void)
 	while (i < 91)
 	{
 		putchar(i);
-                i++;
-        }
+		i++;
+	}
 
 	putchar('\n');
 
