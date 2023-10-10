@@ -32,6 +32,10 @@ void times_table(void)
 				}
 				else
 				{
+					if (i < 2)
+					{
+						_putchar(' ');
+					}
 					_putchar(p + 48);
 				}
 			}
