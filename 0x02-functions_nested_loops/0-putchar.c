@@ -11,9 +11,10 @@ int main(void)
 	char *s = "_putchar";
 	int i = 0;
 
-	for (; i < strlen(s); i++)
+	while (i < 10)
 	{
 		_putchar(s[i]);
+		i++;
 	}
 	_putchar('\n');
 
