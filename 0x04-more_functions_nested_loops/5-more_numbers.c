@@ -14,33 +14,16 @@ void more_numbers(void)
 	{
 		while (j <= 14)
 		{
-			if (j == 0)
+			if (j > 9)
 			{
-				_putchar('0');
+				_putchar('1');
 			}
 
-			print_long(j);
+			_putchar((j % 10) + '0');
 			j++;
 		}
 		j = 0;
 		i++;
 		_putchar('\n');
-	}
-}
-
-#include "main.h"
-
-/**
- * print_long - prints long numbers
- * @value: long number
- *
- * Return: void
- */
-void print_long(long value)
-{
-	if (value != 0)
-	{
-		print_long(value / 10);
-		_putchar((value % 10) + '0');
 	}
 }
