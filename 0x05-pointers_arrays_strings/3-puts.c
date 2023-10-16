@@ -2,8 +2,8 @@
 
 /**
  * _puts - writes a string to stdout
- * @str: string to get size of
- * Return: size of string s
+ * @str: string to print
+ * Return: void
 */
 void _puts(char *str)
 {
