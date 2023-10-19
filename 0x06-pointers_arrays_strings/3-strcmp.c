@@ -7,7 +7,6 @@
  * Return: +ve if s1 is larger, 0 if both are equal
  * or -ve if s2 is larger
 */
-
 int _strcmp(char *s1, char *s2)
 {
 	int result = 0;
