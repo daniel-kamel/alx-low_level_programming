@@ -12,19 +12,17 @@ int main(int __attribute__((unused)) argc, char *argv[])
 {
 	int i;
 	int sum = 0;
-
-	if (argc < 2)
-	{
-		printf("%i\n", 0);
-		return (0);
-	}
+	char *c;
 
 	for (i = 1; i < argc; i++)
 	{
-		if (atoi(argv[i]) < 0 || atoi(argv[i]) % 10 != 0)
+		for (c = argv[i]; *c != '\0'; c++)
 		{
-			printf("Error\n");
-			return (1);
+			if (*c < '0' || *c > '9')
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
 
 		sum += atoi(argv[i]);
