@@ -14,7 +14,7 @@ char *str_concat(char *s1, char *s2)
 	int i;
 	int j;
 
-	conc = malloc(sizeof(s1) + sizeof(s2) - 2);
+	conc = malloc(sizeof(s1) + sizeof(s2) - 4);
 	if (!conc)
 	{
 		printf("Cannot allocate memory");
