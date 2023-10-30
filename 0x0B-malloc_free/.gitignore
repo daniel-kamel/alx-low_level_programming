@@ -1,2 +1,5 @@
-_putchar.c
-*main.c
+*
+!*.c
+main.c
+!*.h
+!*.md
