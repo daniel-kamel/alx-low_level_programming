@@ -19,18 +19,18 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	}
 
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		size += (int) strlen(av[i]);
 	}
 
-	s = malloc(size + (ac - 1));
+	s = malloc(size + ac);
 	if (!s)
 	{
 		return (NULL);
 	}
 
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		while (*av[i] != '\0')
 		{
