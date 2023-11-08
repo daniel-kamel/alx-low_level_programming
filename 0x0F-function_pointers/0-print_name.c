@@ -10,7 +10,7 @@
 */
 void print_name(char *name, void (*f)(char *))
 {
-	if (!f)
+	if (!f || !name)
 		exit(1);
 
 	f(name);
