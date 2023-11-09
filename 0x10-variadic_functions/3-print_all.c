@@ -9,42 +9,40 @@
 void print_all(const char * const format, ...)
 {
 	va_list ap;
-	int i, n;
+	int i = 0, n;
 	char *c, *st, *fmt = "fics";
 
-	va_start(ap, format);
-	n = strlen(format);
-	i = 0;
-
-	while (i < n)
+	if (format)
 	{
-		c = strchr(fmt, format[i]);
+		va_start(ap, format);
+		n = strlen(format);
 
-		if (c)
+		while (i < n)
 		{
-			switch (c[0])
+			c = strchr(fmt, format[i]);
+
+			if (c)
 			{
-				case 'f':
-					printf("%f", va_arg(ap, double));
-					break;
-				case 'i':
-					printf("%i", va_arg(ap, int));
-					break;
-				case 'c':
-					printf("%c", va_arg(ap, int));
-					break;
-				case 's':
-					st = va_arg(ap, char *);
-					printf("%s", st ? st : "(nil)");
-					break;
+				switch (c[0])
+				{
+					case 'f':
+						printf("%f%s", va_arg(ap, double), i < n - 1 ? ", " : "");
+						break;
+					case 'i':
+						printf("%i%s", va_arg(ap, int), i < n - 1 ? ", " : "");
+						break;
+					case 'c':
+						printf("%c%s", va_arg(ap, int), i < n - 1 ? ", " : "");
+						break;
+					case 's':
+						st = va_arg(ap, char *);
+						printf("%s%s", st ? st : "(nil)", i < n - 1 ? ", " : "");
+						break;
+				}
 			}
-
-			if (i < n - 1)
-				printf(", ");
+			i++;
 		}
-		i++;
+		va_end(ap);
+		putchar('\n');
 	}
-
-	va_end(ap);
-	putchar('\n');
 }
