@@ -1,4 +1,3 @@
-#include <string.h>
 #include "variadic_functions.h"
 
 /**
@@ -9,36 +8,30 @@
 void print_all(const char * const format, ...)
 {
 	va_list ap;
-	int i = 0, n;
-	char *c, *st, *fmt = "fics";
+	int i = 0;
+	char *st;
 
 	if (format)
 	{
 		va_start(ap, format);
-		n = strlen(format);
 
-		while (i < n)
+		while (format[i])
 		{
-			c = strchr(fmt, format[i]);
-
-			if (c)
+			switch (format[i])
 			{
-				switch (c[0])
-				{
-					case 'f':
-						printf("%f%s", va_arg(ap, double), i < n - 1 ? ", " : "");
-						break;
-					case 'i':
-						printf("%i%s", va_arg(ap, int), i < n - 1 ? ", " : "");
-						break;
-					case 'c':
-						printf("%c%s", va_arg(ap, int), i < n - 1 ? ", " : "");
-						break;
-					case 's':
-						st = va_arg(ap, char *);
-						printf("%s%s", st ? st : "(nil)", i < n - 1 ? ", " : "");
-						break;
-				}
+				case 'f':
+					printf("%f%s", va_arg(ap, double), (format[i + 1]) ? ", " : "");
+					break;
+				case 'i':
+					printf("%i%s", va_arg(ap, int), (format[i + 1]) ? ", " : "");
+					break;
+				case 'c':
+					printf("%c%s", va_arg(ap, int), (format[i + 1]) ? ", " : "");
+					break;
+				case 's':
+					st = va_arg(ap, char *);
+					printf("%s%s", st ? st : "(nil)", (format[i + 1]) ? ", " : "");
+					break;
 			}
 			i++;
 		}
