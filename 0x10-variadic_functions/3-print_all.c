@@ -11,10 +11,10 @@ void print_all(const char * const format, ...)
 	int i = 0;
 	char *st, *separator = "";
 
+	va_start(ap, format);
+
 	if (format)
 	{
-		va_start(ap, format);
-
 		while (format[i])
 		{
 			switch (format[i])
@@ -41,7 +41,8 @@ void print_all(const char * const format, ...)
 			separator = ", ";
 			i++;
 		}
-		va_end(ap);
-		putchar('\n');
 	}
+	
+	va_end(ap);
+	putchar('\n');
 }
