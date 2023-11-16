@@ -1,1 +1,1 @@
-This directory contains answers to the tasks of 0x10-variadic_functions project in ALX SE program
+This directory contains answers to the tasks of 0x12-singly_linked_lists project in ALX SE program
