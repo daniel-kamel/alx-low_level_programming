@@ -1,1 +1,8 @@
-.vscode
+*
+!0x*
+!*.c
+main.c
+!*.h
+!*.md
+!*.so
+!*.sh
