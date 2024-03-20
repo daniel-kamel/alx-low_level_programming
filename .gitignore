@@ -6,3 +6,4 @@ main.c
 !*.md
 !*.so
 !*.sh
+!*Makefile
