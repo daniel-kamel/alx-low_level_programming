@@ -3,8 +3,5 @@ SRC = main.c school.c
 OBJ = main.o school.o
 NAME = school
 
-all: complie
-	$(CC) $(OBJ) -o $(NAME)
-
-complie: $(SRC)
+all: $(OBJ)
 	$(CC) $^ -o $(NAME)
