@@ -7,3 +7,4 @@ main.c
 !*.so
 !*.sh
 !*Makefile
+!*.py
