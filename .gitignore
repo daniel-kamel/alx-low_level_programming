@@ -8,3 +8,4 @@ main.c
 !*.sh
 !*Makefile
 !*.py
+![0-9]-O
