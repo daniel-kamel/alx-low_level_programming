@@ -9,3 +9,4 @@ main.c
 !*Makefile
 !*.py
 ![0-9]-O
+!0-blog_post
