@@ -1,0 +1,19 @@
+# What happens when you type "www.google.com" in your browser and then press enter?
+Ever wondered what happens in the blink of an eye when you type and press enter? It might seem like magic, but it's actually a complex dance between various technologies working together. Let's lift the veil and see what goes on behind the scenes!
+## Step 1: Translating the Address
+The journey begins with the DNS (Domain Name System). Think of DNS as a giant phonebook for the internet. When you enter "https://www.google.com", your browser doesn't understand this cryptic address. It sends a DNS request asking, "Hey, what's the IP address for www.google.com?" The DNS server looks it up and returns the numerical IP address, like a phone number, which the browser can understand.
+## Step 2: Connecting and Securing the Channel
+Now, with the IP address in hand, your browser initiates a connection using the TCP/IP (Transmission Control Protocol/Internet Protocol). TCP/IP is the language computers use to communicate on the internet. Imagine it like a two-way conversation where messages are broken down into packets, sent, and reassembled to ensure everything arrives correctly.
+Before data flows freely, a firewall might step in. Think of it as a security guard, checking if the incoming traffic is authorized. If all is well, the connection is established.
+## Step 3: Encryption and the Handshake
+For secure communication, especially with sensitive information, HTTPS (Hypertext Transfer Protocol Secure) comes into play. HTTPS uses SSL (Secure Sockets Layer) to encrypt the communication between your browser and the web server. Imagine whispering secrets through a secure tunnel – that's what HTTPS does!
+## Step 4: Balancing the Load
+The request might now reach a load balancer. This acts like a traffic director, distributing incoming requests across multiple web servers to ensure smooth performance, especially on high-traffic websites.
+## Step 5: Serving Up the Content
+The request finally arrives at the web server. The web server is like a sophisticated butler, retrieving the requested resources (like HTML files, images) and preparing them for delivery.
+## Step 6: Building the Page (Optional: Application Server)
+Some websites use an additional layer – the application server. This server handles complex logic and might interact with a database to retrieve or store information specific to your request. For instance, on a shopping website, the application server might check the database for product details when you view an item.
+## Step 7: Presenting the masterpiece!
+Finally, the prepared content reaches your browser. The browser interprets the code, fetches additional resources like images, and builds the webpage you see.
+And voila! In a matter of milliseconds, the magic of the internet brings the requested webpage to your screen.
+This is a simplified explanation, but it captures the essence of what happens when you enter a URL. The next time you browse the web, remember the complex dance happening behind the scenes to deliver the information you seek!
